@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
-class BookDetails extends StatelessWidget {
-  const BookDetails({super.key});
+import 'widgets/book_details_view_body.dart';
+
+class BookDetailsView extends StatelessWidget {
+  const BookDetailsView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const BookDetailsViewBody();
   }
 }
