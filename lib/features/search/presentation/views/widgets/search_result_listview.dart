@@ -9,8 +9,8 @@ class SearchResultListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       padding: EdgeInsets.zero,
-      physics:const BouncingScrollPhysics(),
-      itemBuilder: (context,index)=>const BestSellerListViewItem(),
+      physics: const BouncingScrollPhysics(),
+      itemBuilder: (context, index) => const BestSellerListViewItem(),
       itemCount: 10,
     );
   }

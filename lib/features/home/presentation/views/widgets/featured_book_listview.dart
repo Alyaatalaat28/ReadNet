@@ -9,21 +9,20 @@ class FeaturedBookListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  SizedBox(
+    return SizedBox(
       height: MediaQuery.of(context).size.height * 0.3,
       child: ListView.builder(
-        physics:const BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
-        itemBuilder: (BuildContext context, int index)=>Padding(
+        itemBuilder: (BuildContext context, int index) => Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8.0),
           child: GestureDetector(
-            onTap: (){
-              GoRouter.of(context).push(AppRouter.kBookDetails);
-            },
-            child: const CustomBookImage()),
+              onTap: () {
+                GoRouter.of(context).push(AppRouter.kBookDetails);
+              },
+              child: const CustomBookImage()),
         ),
         itemCount: 10,
-    
       ),
     );
   }

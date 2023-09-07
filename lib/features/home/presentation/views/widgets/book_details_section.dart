@@ -10,34 +10,44 @@ class BookDetailsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var width =MediaQuery.of(context).size.width;
-    return  Column(
+    var width = MediaQuery.of(context).size.width;
+    return Column(
       children: [
-           Padding(
-             padding: EdgeInsets.symmetric(horizontal: width *.2 ),
-             child:const CustomBookImage(),
-           ),
-           const SizedBox(height: 43.0,),
-           Text('The Jungle Book',
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: width * .2),
+          child: const CustomBookImage(),
+        ),
+        const SizedBox(
+          height: 43.0,
+        ),
+        Text(
+          'The Jungle Book',
           style: Styles.textStyle30.copyWith(
             fontWeight: FontWeight.bold,
           ),
           textAlign: TextAlign.center,
+        ),
+        const SizedBox(
+          height: 6.0,
+        ),
+        Opacity(
+          opacity: .7,
+          child: Text(
+            'Rudyard Kjpling',
+            style: Styles.textStyle18.copyWith(
+              fontWeight: FontWeight.w500,
+              fontStyle: FontStyle.italic,
+            ),
           ),
-           const SizedBox(height: 6.0,),
-           Opacity(
-            opacity: .7,
-             child: Text('Rudyard Kjpling',
-                     style: Styles.textStyle18.copyWith(
-               fontWeight: FontWeight.w500,
-               fontStyle: FontStyle.italic,
-                     ),),
-           ),
-           const SizedBox(height: 18.0,),
-           const BookRating(),
-           const SizedBox(height: 37.0,),
-           const BooksAction(),
-
+        ),
+        const SizedBox(
+          height: 18.0,
+        ),
+        const BookRating(),
+        const SizedBox(
+          height: 37.0,
+        ),
+        const BooksAction(),
       ],
     );
   }

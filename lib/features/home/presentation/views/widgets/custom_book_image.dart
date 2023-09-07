@@ -7,15 +7,15 @@ class CustomBookImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  ClipRRect(
+    return ClipRRect(
       borderRadius: BorderRadius.circular(16.0),
-      child:const AspectRatio(
-        aspectRatio: 2.6/4,
+      child: const AspectRatio(
+        aspectRatio: 2.6 / 4,
         child: Image(
           image: AssetImage(AssetsData.testImage),
           fit: BoxFit.fill,
-          ),
         ),
+      ),
     );
   }
 }

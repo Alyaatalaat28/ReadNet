@@ -8,26 +8,28 @@ class BookRating extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Row(
+    return Row(
       children: [
-      const  Icon(
-        FontAwesomeIcons.solidStar,
-        size: 14,
-        color: Color(0xffFFDD4F)),
-      const  SizedBox(width: 6.3,),
-      const  Text('4.8',
-        style:Styles.textStyle16 ,
+        const Icon(FontAwesomeIcons.solidStar,
+            size: 14, color: Color(0xffFFDD4F)),
+        const SizedBox(
+          width: 6.3,
         ),
-      const  SizedBox(width: 5.0,),
+        const Text(
+          '4.8',
+          style: Styles.textStyle16,
+        ),
+        const SizedBox(
+          width: 5.0,
+        ),
         Opacity(
-          opacity: .5,
-          child: Text('(2390)',
-          style: Styles.textStyle14.copyWith(
-            fontWeight:  FontWeight.w600,
-          ),
-          )
-          ),
-        
+            opacity: .5,
+            child: Text(
+              '(2390)',
+              style: Styles.textStyle14.copyWith(
+                fontWeight: FontWeight.w600,
+              ),
+            )),
       ],
     );
   }

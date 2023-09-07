@@ -14,32 +14,37 @@ class HomeViewBody extends StatelessWidget {
       physics: BouncingScrollPhysics(),
       slivers: [
         SliverToBoxAdapter(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children:  [
-             Padding(
-               padding: EdgeInsets.symmetric(horizontal: 30),
-               child: CustomAppBar(),
-             ),
-             FeaturedBookListView(),
-             SizedBox(height: 50.0,),
-             Padding(
-               padding:EdgeInsets.symmetric(horizontal: 30),
-               child: Text('Newst Books',
-               style: Styles.textStyle18,),
-             ),
-             SizedBox(height: 20.0,)
-          ],
-        ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30),
+                child: CustomAppBar(),
+              ),
+              FeaturedBookListView(),
+              SizedBox(
+                height: 50.0,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30),
+                child: Text(
+                  'Newst Books',
+                  style: Styles.textStyle18,
+                ),
+              ),
+              SizedBox(
+                height: 20.0,
+              )
+            ],
+          ),
         ),
         SliverFillRemaining(
-          child:Padding(
-            padding:EdgeInsets.symmetric(horizontal: 30),
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 30),
             child: BestSellerListView(),
-          ) ,
+          ),
         ),
       ],
-
     );
   }
 }

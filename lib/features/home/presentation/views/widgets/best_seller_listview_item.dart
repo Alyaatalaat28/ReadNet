@@ -13,41 +13,48 @@ class BestSellerListViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         GoRouter.of(context).push(AppRouter.kBookDetails);
       },
-      child:  SizedBox(
+      child: SizedBox(
         height: 125,
-        child:  Row(
+        child: Row(
           children: [
-           const SizedBox(
-              child: CustomBookImage()),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('Harry Potter and the Goblet of Fire',
+            const SizedBox(child: CustomBookImage()),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Harry Potter and the Goblet of Fire',
                     style: Styles.textStyle20.copyWith(
-                      fontFamily:kGtSectraFine, 
-                    ),),
-                    const SizedBox(height: 3.0,),
-                   const Text('J.K. Rowling',
-                    style:Styles.textStyle14 ,),
-                    const SizedBox(height: 3.0,),
-                    Row(
-                      children: [
-                          Text('Free',
-                          style: Styles.textStyle20.copyWith(
-                            fontWeight: FontWeight.bold
-                          ),),
-                          const Spacer(),
-                        const  BookRating(),
-
-                      ],
-                    )
-                  ],
-                ),
+                      fontFamily: kGtSectraFine,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 3.0,
+                  ),
+                  const Text(
+                    'J.K. Rowling',
+                    style: Styles.textStyle14,
+                  ),
+                  const SizedBox(
+                    height: 3.0,
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        'Free',
+                        style: Styles.textStyle20
+                            .copyWith(fontWeight: FontWeight.bold),
+                      ),
+                      const Spacer(),
+                      const BookRating(),
+                    ],
+                  )
+                ],
               ),
+            ),
           ],
         ),
       ),
