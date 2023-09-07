@@ -30,9 +30,12 @@ class ServerFailure extends Failure {
           return ServerFailure('No Internet Connection');
         }
         return ServerFailure('Unexpected Error, Please try again!');
-      default:
-        return ServerFailure.fromResponse(
-            dioError.response!.statusCode, dioError.response!.data);
+       default:
+       if(dioError.response!=null){
+           return ServerFailure.fromResponse(dioError.response!.statusCode,dioError.response!.data );
+       }
+       else{ return ServerFailure('Opps There was an Error, Please try again');
+       }
     }
   }
   factory ServerFailure.fromResponse(int? statusCode, dynamic response) {
