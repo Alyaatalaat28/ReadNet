@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 void customSnackBar(context ,String text){
@@ -11,3 +9,5 @@ void customSnackBar(context ,String text){
     )
   );
 }
+
+
