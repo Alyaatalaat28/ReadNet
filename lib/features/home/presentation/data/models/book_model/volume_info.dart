@@ -1,4 +1,3 @@
-import 'dart:convert';
 
 import 'package:equatable/equatable.dart';
 
@@ -28,6 +27,8 @@ class VolumeInfo extends Equatable {
   final String? previewLink;
   final String? infoLink;
   final String? canonicalVolumeLink;
+  final num? averageRating;
+  final int? ratingsCount;
 
   const VolumeInfo({
     this.title,
@@ -50,12 +51,14 @@ class VolumeInfo extends Equatable {
     this.previewLink,
     this.infoLink,
     this.canonicalVolumeLink,
+    this.averageRating,
+    this.ratingsCount
   });
 
   factory VolumeInfo.fromMap(Map<String, dynamic> data) => VolumeInfo(
         title: data['title'] as String?,
         subtitle: data['subtitle'] as String?,
-        authors: data['authors'] as List<String>?,
+        authors: (data['authors'] as List<dynamic>?)?.cast<String>(),
         publisher: data['publisher'] as String?,
         publishedDate: data['publishedDate'] as String?,
         description: data['description'] as String?,
@@ -68,7 +71,7 @@ class VolumeInfo extends Equatable {
                 data['readingModes'] as Map<String, dynamic>),
         pageCount: data['pageCount'] as int?,
         printType: data['printType'] as String?,
-        categories: data['categories'] as List<String>?,
+        categories: (data['categories'] as List<dynamic>?)?.cast<String>(),
         maturityRating: data['maturityRating'] as String?,
         allowAnonLogging: data['allowAnonLogging'] as bool?,
         contentVersion: data['contentVersion'] as String?,
@@ -83,6 +86,8 @@ class VolumeInfo extends Equatable {
         previewLink: data['previewLink'] as String?,
         infoLink: data['infoLink'] as String?,
         canonicalVolumeLink: data['canonicalVolumeLink'] as String?,
+        averageRating: data['averageRating'],
+        ratingsCount: data['ratingsCount'] as int?,
       );
 
   Map<String, dynamic> toMap() => {
@@ -107,19 +112,10 @@ class VolumeInfo extends Equatable {
         'previewLink': previewLink,
         'infoLink': infoLink,
         'canonicalVolumeLink': canonicalVolumeLink,
+        'averageRating': averageRating,
+        'ratingsCount': ratingsCount,
       };
 
-  /// `dart:convert`
-  ///
-  /// Parses the string and returns the resulting Json object as [VolumeInfo].
-  factory VolumeInfo.fromJson(String data) {
-    return VolumeInfo.fromMap(json.decode(data) as Map<String, dynamic>);
-  }
-
-  /// `dart:convert`
-  ///
-  /// Converts [VolumeInfo] to a JSON string.
-  String toJson() => json.encode(toMap());
 
   @override
   List<Object?> get props {
@@ -144,6 +140,8 @@ class VolumeInfo extends Equatable {
       previewLink,
       infoLink,
       canonicalVolumeLink,
+      averageRating,
+      ratingsCount,
     ];
   }
 }

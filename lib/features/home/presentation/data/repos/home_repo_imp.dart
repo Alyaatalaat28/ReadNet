@@ -22,9 +22,9 @@ class HomeRepoImpl implements HomeRepo{
      List<Item>books=[];
      for(var item in data['items']){
       try{
-        books.add(Item.fromJson(item));
+        books.add(Item.fromMap(item));
       }catch(e){
-         books.add(Item.fromJson(item));
+         books.add(Item.fromMap(item));
       }
      }
      return Right(books);
@@ -46,7 +46,7 @@ class HomeRepoImpl implements HomeRepo{
           endPoint: 'volumes?Filtering=free-ebooks&q=subject:Programming');
       List<Item> books = [];
       for (var item in data['items']) {
-        books.add(Item.fromJson(item));
+        books.add(Item.fromMap(item));
       }
 
       return right(books);
@@ -73,7 +73,7 @@ class HomeRepoImpl implements HomeRepo{
           endPoint:'volumes?Filtering=free-ebooks&Sorting=relevance &q=subject:Programming');
       List<Item> books = [];
       for (var item in data['items']) {
-        books.add(Item.fromJson(item));
+        books.add(Item.fromMap(item));
       }
 
       return right(books);

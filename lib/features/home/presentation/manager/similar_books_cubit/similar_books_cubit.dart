@@ -7,9 +7,9 @@ import '../../data/repos/home_repo.dart';
 part 'similar_books_state.dart';
 
 class SimilarBooksCubit extends Cubit<SimilarBooksState> {
-  SimilarBooksCubit({required this.homeRepo}) : super(SimilarBooksInitial());
+  SimilarBooksCubit(this.homeRepo) : super(SimilarBooksInitial());
   
-    HomeRepo homeRepo;
+  final  HomeRepo homeRepo;
 
    Future<void>featchSimilarBooks({required String category})async{
     emit(SimilarBooksInitial());

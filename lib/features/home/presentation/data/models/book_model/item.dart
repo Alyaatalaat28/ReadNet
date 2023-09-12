@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:equatable/equatable.dart';
 
 import 'access_info.dart';
@@ -57,18 +55,6 @@ class Item extends Equatable {
         'accessInfo': accessInfo?.toMap(),
         'searchInfo': searchInfo?.toMap(),
       };
-
-  /// `dart:convert`
-  ///
-  /// Parses the string and returns the resulting Json object as [Item].
-  factory Item.fromJson(String data) {
-    return Item.fromMap(json.decode(data) as Map<String, dynamic>);
-  }
-
-  /// `dart:convert`
-  ///
-  /// Converts [Item] to a JSON string.
-  String toJson() => json.encode(toMap());
 
   @override
   List<Object?> get props {
