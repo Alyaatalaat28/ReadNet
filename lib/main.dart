@@ -1,4 +1,4 @@
-import 'package:bookly_app/features/home/presentation/data/repos/home_repo_imp.dart';
+import 'package:bookly_app/features/home/data/repos/home_repo_imp.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'constants.dart';
