@@ -21,7 +21,7 @@ final class NewestBooksErrorState extends NewestBooksState {
 }
 
 final class NewestBooksSuccessState extends NewestBooksState {
-  List<Item>books=[];
+  List<BookEntity>books=[];
   NewestBooksSuccessState(this.books);
 
 }

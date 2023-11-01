@@ -49,4 +49,5 @@ class ServerFailure extends Failure {
       return ServerFailure('Opps There was an Error, Please try again');
     }
   }
+
 }

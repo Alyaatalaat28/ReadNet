@@ -22,7 +22,7 @@ final class FeaturedBookErrorState extends FeaturedBookState {
 }
 
 final class FeaturedBookSuccessState extends FeaturedBookState {
-  List<Item>books=[];
+  List<BookEntity>books=[];
   FeaturedBookSuccessState(this.books);
 
 }

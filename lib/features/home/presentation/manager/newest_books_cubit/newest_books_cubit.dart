@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
+import 'package:bookly_app/features/home/domain/entities/book_entity.dart';
+import 'package:bookly_app/features/home/domain/repos/home_repo.dart';
 import 'package:equatable/equatable.dart';
 
-import '../../data/models/book_model/item.dart';
-import '../../data/repos/home_repo.dart';
 
 part 'newest_books_state.dart';
 
