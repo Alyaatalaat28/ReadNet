@@ -1,7 +1,6 @@
-# Bookly
+# Librarium
 
-Bookly is a Flutter mobile application that provides a user-friendly interface for browsing and discovering books. The app utilizes various APIs to introduce books on the home screen, display book details, and enable users to search for books. Additionally, the app incorporates the BLoC for state management and includes a splash screen for enhanced user experience .
-- Boc, MVVM, Rest Apis, dartz and singleton design pattern used in this app
+Librarium is a user-friendly Flutter app for browsing and discovering books. It uses APIs to showcase books,bloc for state management, includes a splash screen, and incorporates clean architecture, caching, and pagination for improved performance.
  
 ![PhotoGrid_1694509647851](https://github.com/Alyaatalaat28/Bookly/assets/78979377/f709a8c3-b416-4ddc-aad5-8bdcfbe4cba1)
 ![PhotoGrid_1694509678901](https://github.com/Alyaatalaat28/Bookly/assets/78979377/6c363bf9-5300-4ae9-8a46-1be81372366f)
