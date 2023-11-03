@@ -26,3 +26,10 @@ final class FeaturedBookSuccessState extends FeaturedBookState {
   FeaturedBookSuccessState(this.books);
 
 }
+
+final class FeaturedBooksPaginationLoading extends FeaturedBookState {}
+
+final class FeaturedBooksPaginationFailure extends FeaturedBookState {
+    final String error;
+  FeaturedBooksPaginationFailure(this.error);
+}

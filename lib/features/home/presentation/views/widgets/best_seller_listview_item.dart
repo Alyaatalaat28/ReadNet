@@ -1,17 +1,17 @@
 
+import 'package:bookly_app/features/home/domain/entities/book_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../constants.dart';
 import '../../../../../core/utils/app_router.dart';
 import '../../../../../core/utils/styles.dart';
-import '../../data/models/book_model/item.dart';
 import 'book_rating.dart';
 import 'custom_book_image.dart';
 
 class BestSellerListViewItem extends StatelessWidget {
   const BestSellerListViewItem({super.key,required this.bookModel});
-  final Item bookModel;
+  final BookEntity bookModel;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -22,7 +22,7 @@ class BestSellerListViewItem extends StatelessWidget {
         height: 125,
         child: Row(
           children: [
-             SizedBox(child: CustomBookImage(imageUrl:bookModel.volumeInfo?.imageLinks?.thumbnail??'',)),
+             SizedBox(child: CustomBookImage(imageUrl:bookModel.image??'',)),
              const SizedBox(
               width: 30,),
          Expanded(
@@ -30,7 +30,7 @@ class BestSellerListViewItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    bookModel.volumeInfo!.title!,
+                    bookModel.title,
                     maxLines: 2,
                     overflow:TextOverflow.ellipsis,
                     style: Styles.textStyle20.copyWith(
@@ -41,7 +41,7 @@ class BestSellerListViewItem extends StatelessWidget {
                     height: 3.0,
                   ),
                    Text(
-                    bookModel.volumeInfo!.authors![0],
+                    bookModel.authorName![0],
                     style: Styles.textStyle14,
                   ),
                   const SizedBox(
@@ -56,8 +56,8 @@ class BestSellerListViewItem extends StatelessWidget {
                       ),
                       const Spacer(),
                        BookRating(
-                         rating:bookModel.volumeInfo!.averageRating??0 ,
-                         count:bookModel.volumeInfo!.ratingsCount??0 ,
+                         rating:bookModel.rating??0 ,
+                         count:0,
                       ),
                     ],
                   )

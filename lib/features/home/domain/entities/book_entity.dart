@@ -16,6 +16,9 @@ class BookEntity {
   final num? price;
   @HiveField(5)
   final num? rating;
+  @HiveField(6)
+  String previewLink;
+  
 
   BookEntity(
       {required this.image,
@@ -23,5 +26,6 @@ class BookEntity {
       required this.authorName,
       required this.price,
       required this.rating,
-      required this.bookId});
+      required this.bookId,
+      required this.previewLink});
 }

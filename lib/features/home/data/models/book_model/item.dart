@@ -29,7 +29,8 @@ class Item extends BookEntity {
             authorName: volumeInfo?.authors?.first ?? 'No Name',
             price: 0.0,
             rating: volumeInfo!.averageRating,
-            title: volumeInfo.title!
+            title: volumeInfo.title!,
+            previewLink: volumeInfo.previewLink!,
             );
   
 

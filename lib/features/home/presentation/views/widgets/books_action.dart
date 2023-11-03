@@ -1,13 +1,13 @@
 
 import 'package:bookly_app/core/utils/function/launch_url.dart';
+import 'package:bookly_app/features/home/domain/entities/book_entity.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/widgets/custom_button.dart';
-import '../../data/models/book_model/item.dart';
 
 class BooksAction extends StatelessWidget {
   const BooksAction({super.key,required this.bookModel});
-    final Item bookModel;
+    final BookEntity bookModel;
   @override
   Widget build(BuildContext context) {
     return  Padding(
@@ -27,7 +27,7 @@ class BooksAction extends StatelessWidget {
           Expanded(
               child: CustomButton(
               onPressed: (){
-                 launchCustomUrl(context, bookModel.volumeInfo!.previewLink);
+                 launchCustomUrl(context, bookModel.previewLink);
                 },
             text: getText(bookModel),
             fontSize: 16.0,
@@ -41,8 +41,9 @@ class BooksAction extends StatelessWidget {
       ),
     );
   }
-  String getText(Item bookModel){
-    if(bookModel.volumeInfo?.previewLink==null){
+  String getText(BookEntity bookModel){
+    // ignore: unnecessary_null_comparison
+    if(bookModel.previewLink==null){
       return 'Not Available';
     }else{
       return 'Preview';

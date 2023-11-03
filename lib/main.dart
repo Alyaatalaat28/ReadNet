@@ -1,5 +1,6 @@
 import 'package:bookly_app/features/home/data/repos/home_repo_imp.dart';
 import 'package:bookly_app/features/home/domain/entities/book_entity.dart';
+import 'package:bookly_app/features/home/domain/use_cases/fetch_featured_books_use_case.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'constants.dart';
@@ -29,8 +30,8 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => FeaturedBookCubit(homeRepo:getIt.get<HomeRepoImpl>() ,
-        )..featchFeaturedBooks()
+          create: (context) => FeaturedBookCubit(featuredBooksUseCase:FetchFeaturedBooksUseCase(getIt.get<HomeRepoImpl>()) ,
+        )..fetchFeaturedBooks()
         ),
         BlocProvider(
           create: (context) => NewestBooksCubit(homeRepo:getIt.get<HomeRepoImpl>() ,

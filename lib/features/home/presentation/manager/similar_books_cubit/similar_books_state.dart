@@ -21,7 +21,7 @@ final class SimilarBooksErrorState extends SimilarBooksState {
 }
 
 final class SimilarBooksSuccessState extends SimilarBooksState {
-  List<Item>books=[];
+  List<BookEntity>books=[];
   SimilarBooksSuccessState(this.books);
 
 }

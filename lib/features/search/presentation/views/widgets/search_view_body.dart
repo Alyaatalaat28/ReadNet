@@ -1,4 +1,3 @@
-import 'package:bookly_app/features/search/presentation/views/widgets/search_result_listview.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/styles.dart';
@@ -25,7 +24,7 @@ class SearchViewBody extends StatelessWidget {
           SizedBox(
             height: 16.0,
           ),
-          Expanded(child: SearchResultListView()),
+         
         ],
       ),
     );
