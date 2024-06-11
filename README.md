@@ -1,18 +1,18 @@
-ReadNet 📚
+# ReadNet 📚
 ReadNet is a user-friendly Flutter application designed for browsing and discovering books. With a sleek interface and powerful features, Librarium provides an enhanced book discovery experience.
 
-Features ✨
-Book Discovery 🔍
+## Features ✨
+### Book Discovery 🔍
 APIs: Utilizes external APIs to showcase a wide variety of books.
 Search and Browse: Easily find and explore books by different authors, genres, and categories.
-State Management 🧠
+## State Management 🧠
 BLoC Pattern: Implements the BLoC (Business Logic Component) pattern for efficient and manageable state management.
-User Experience 🌟
+## User Experience 🌟
 Splash Screen: Welcomes users with an engaging splash screen.
 Clean Architecture: Adopts clean architecture principles for a maintainable and scalable codebase.
 Caching: Uses caching mechanisms to enhance performance and reduce data load times.
 Pagination: Implements pagination for smooth and efficient data loading.
-Why ReadNet? 📖
+## Why ReadNet? 📖
 Librarium stands out with its user-centric design and robust features. It offers a seamless experience for book lovers, making it easy to discover and enjoy new books with enhanced performance and clean architecture.
  
 ![PhotoGrid_1694509647851](https://github.com/Alyaatalaat28/Bookly/assets/78979377/f709a8c3-b416-4ddc-aad5-8bdcfbe4cba1)
